@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Us Page</title>
+</head>
+<body>
+    
+    <div class="">
+
+        <!-- Navbar section -->
+        <div class="flex items-center justify-between w-full p-4 bg-white lg:bg-transparent">
+            <!-- Logo -->
+            <img src="assets/flumaIcon.png" alt="flumaIcon" class="w-[100px] md:w-[150px] lg:w-[150px] lg:h-[50px] lg:mx-5">
+            
+            <!-- Hamburger Icon -->
+            <span id="hamburger" class="text-[20px] font-bold cursor-pointer lg:hidden">☰</span>
+            
+            <!-- Menu -->
+            <div id="menu" class="hidden lg:flex lg:items-center lg:gap-4">
+              <a href="pricing.html" class="text-[20px] hover:text-[#295BFF] font-[650] bg-[#6078ff] text-white px-4 py-2 rounded-lg lg:bg-transparent lg:text-black lg:px-6">Pricing</a>
+              <a href="contact.html" class="text-[20px] hover:text-[#295BFF] font-[650] lg:text-black lg:px-6">Contact Us</a>
+            </div>
+            
+            <!-- Close Icon for Mobile -->
+            <span id="close" class="text-[30px] font-bold cursor-pointer absolute top-4 right-4 hidden lg:hidden">x</span>
+        </div>
+
+        <!-- This is Contact Us Header Section -->
+         <div class="bg-gradient-to-r from-[#6078ff] to-[#b000ff] p-[15%] flex flex-col justify-center items-center">
+            <h1 class="text-white font-[600] text-[30px]">Contact us</h1>
+            <h1 class="text-white font-[550] text-[16px]">We would love to hear from you.</h1>
+            <img src="assets/circle.png" alt="cirlce" class="absolute w-[30px] h-[30px] sm:left-[80%] sm:top-[39%]">
+         </div>
+
+         <!-- This is Contact Us text section -->
+          <div class="">
+            <div class="m-5">
+                <h1 class="text-[#6078ff] font-[650] text-[15px]">SEND US A MESSAGE</h1>
+                <h1 class="text-black font-[650] text-[25px] my-5">Do you have questions or feedback?</h1>
+                <h1 class="text-gray-400 text-[15px] my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi totam veniam quidem,
+                     quos est, hic atque animi debitis suscipit repellendus ad adipisci doloribus distinctio excepturi quisquam dolorum sit ea ipsum.</h1>
+                <button class="bg-[#6078ff] flex justify-center items-center px-6 py-1 rounded-full gap-4">
+                    <i class="fa-brands fa-whatsapp text-white"></i>
+                    <h1 class="text-white font-[600] text-[10px] cursor-pointer py-2">CONTACT SUPPORT</h1>
+                </button>
+            </div>
+          </div>
+
+          <!-- This is Contact Us Form -->
+           <div class="mt-10 mb-12">
+            <form class="rounded-2xl border-1 border-gray-400 bg-white flex flex-col sm:px-6 sm:py-4 sm:mx-6">
+                <!-- This is name section -->
+                <label for="" class="font-[600] text-[15px]">Name</label>
+                <input type="text" placeholder="Name" class="bg-[#eaedf1] rounded-lg sm:py-2 sm:px-3 sm:mb-3">
+
+                <!-- This is name section -->
+                <label for="" class="font-[600] text-[15px]">Compant</label>
+                <input type="text" placeholder="Company" class="bg-[#eaedf1] rounded-lg sm:py-2 sm:px-3 sm:mb-3">
+                
+                <!-- This is name section -->
+                <label for="" class="font-[600] text-[15px]">Phone</label>
+                <input type="text" placeholder="Phone" class="bg-[#eaedf1] rounded-lg sm:py-2 sm:px-3 sm:mb-3">
+                
+                <!-- This is name section -->
+                <label for="" class="font-[600] text-[15px]">Email</label>
+                <input type="text" placeholder="Email" class="bg-[#eaedf1] rounded-lg sm:py-2 sm:px-3 sm:mb-3">
+                
+                <!-- This is name section -->
+                <label for="" class="font-[600] text-[15px]">Message</label>
+                <textarea type="text" placeholder="Message" class="bg-[#eaedf1] rounded-lg sm:py-2 sm:px-3 sm:mb-3">
+                </textarea>
+
+                <!-- This is send message button -->
+                 <button class="flex justify-center items-center gap-4 bg-[#6078ff] rounded-full text-white sm:text-[12px] sm:font-[600] sm:py-3 sm:px-10">
+                    <h1>SEND MESSAGE</h1>
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                 </button>
+              </form>
+           </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+    <!-- This is talwind screen resolutions code -->
+  <script>
+        tailwind.config = {
+    theme: {
+        extend: {
+        colors: {
+        },
+        screens: {
+            'sm': {'min': '200px', 'max': '600px'},   
+            'md': {'min':'601px', 'max':'999px'},
+            'lg': {'min':'1000px', 'max':'1700px'},            
+                },
+            },
+        },
+        }
+    </script>
+
+<!-- This is the navbar script -->
+<script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.getElementById('hamburger');
+    
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        hamburger.textContent = '×'; // Change to "X"
+    } else {
+        menu.classList.add('hidden');
+        hamburger.textContent = '☰'; // Change back to hamburger
+    }
+  });
+
+  document.getElementById('close').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.getElementById('hamburger');
+    
+    menu.classList.add('hidden');
+    hamburger.textContent = '☰'; // Change back to hamburger
+  });
+</script>
+
+</body>
+</html>
