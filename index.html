@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <title>Fluma Web Design</title>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+       .clip-triangle {
+            clip-path: polygon(100%, 100% ,100%,100%);
+            border-radius: 100px 0 0 0;
+            object-fit: cover;
+        }
+        .clip-circle {
+          clip-path: circle();
+        }
+        .clip-square {
+          clip-path: circle(0,0,0,0);
+          border-radius: 0 0 100px 100px;
+          object-fit: cover;
+        }
+        .clip-drop {
+          clip-path: circle(0,0,0,0);
+          border-radius: 0 100px 100px 100px;
+          object-fit: cover;
+        }
+        .clip-CurverCircle {
+          clip-path: circle(-50% 100% 100% 100%);
+          border-radius: 100% 100% 100% 50%;
+          object-fit: cover;
+        }
+    </style>
+
+</head>
+<body>
+
+  <div class="mx-auto w-full">
+
+          <!-- Navbar section -->
+          <div class="flex items-center justify-between w-full p-4 bg-white lg:bg-transparent">
+            <!-- Logo -->
+            <img src="assets/flumaIcon.png" alt="flumaIcon" class="w-[100px] md:w-[150px] lg:w-[150px] lg:h-[50px] lg:mx-5">
+
+            <!-- Hamburger Icon -->
+            <span id="hamburger" class="text-[20px] font-bold cursor-pointer lg:hidden">☰</span>
+
+            <!-- Menu -->
+            <div id="menu" class="hidden lg:flex lg:items-center lg:gap-4">
+              <a href="#home" class="text-[20px] hover:text-[#295BFF] font-[650] bg-[#6078ff] text-white px-4 py-2 rounded-lg lg:bg-transparent lg:text-black lg:px-6">Home</a>
+              <a href="#pricing" class="text-[20px] hover:text-[#295BFF] font-[650] lg:text-black lg:px-6">Pricing</a>
+            </div>
+
+            <!-- Close Icon for Mobile -->
+            <span id="close" class="text-[30px] font-bold cursor-pointer absolute top-4 right-4 hidden lg:hidden">x</span>
+          </div>
+
+          <!-- Mobile Menu (hidden by default) -->
+          <div id="mobile-menu" class="fixed top-0 right-0 w-full h-screen bg-white shadow-lg flex flex-col items-center pt-20 space-y-4 lg:hidden hidden">
+            <span id="close" class="text-[30px] font-bold cursor-pointer absolute top-4 right-4">x</span>
+            <a href="#home" class="text-[20px] font-[650] bg-[#6078ff] text-white px-6 py-3 rounded-lg">Home</a>
+            <a href="#pricing" class="text-[20px] font-[650]">Pricing</a>
+          </div>
+
+
+          <!-- This is the whole header section - specific for dekstop screen -->
+          <div class="lg:flex lg:ml-20">
+            <!-- This is header section -->
+            <div class="lg:flex lg:justify-between lg:items-start p-4">
+              <!-- This is images section in header -->
+              <div class="flex sm:flex-col sm:justify-center sm:items-center
+                          md:grid md:grid-cols-2 md:ml-[10%] md:mt-12
+                          lg:grid lg:grid-cols-2 lg:gap-4 lg:mx-2">
+                <img src="assets/homeImg1.jpg" alt="homeImg1" data-aos="zoom-in" class="clip-triangle w-[150px] h-[150px] sm:mt-10 sm:mb-3
+                                                                     md:w-[250px] md:h-[250px]
+                                                                     lg:w-[350px] lg:h-[300px]">
+                <img src="assets/homeImg2.jpg" alt="homeImg2" data-aos="zoom-in" class="clip-circle -z-10 w-[250px] mb-5
+                                                                     md:w-[250px] md:h-[250px] md:object-cover
+                                                                     lg:w-[550px] lg:h-[300px] lg:object-cover">
+                <img src="assets/homeImg3.jpg" alt="homeImg3" data-aos="zoom-in" class="clip-square h-[150px] w-[150px] mb-5
+                                                                     md:w-[250px] md:h-[250px]
+                                                                     lg:w-[350px] lg:h-[300px]">
+                <img src="assets/homeImg4.jpg" alt="homeImg4" data-aos="zoom-in" class="clip-drop h-[150px] w-[150px] mb-5
+                                                                     md:w-[250px] md:h-[250px]
+                                                                     lg:w-[350px] lg:h-[300px]">
+                <img src="assets/yield.png" alt="yield" data-aos="zoom-in" class="sm:hidden md:w-[30px] md:ml-[50%] 
+                                                               lg:absolute lg:left-[80%] lg:top-[40%] lg:-z-10 lg:w-[30px] lg:h-[30px]"style="transform: rotate(-30deg);">
+              </div>
+            </div>
+
+            <div class="lg:flex lg:flex-col " data-aos="fade-left" data-aos-duration="1000">           
+              <!-- This is text section in header -->
+              <div class="">
+                <h1 class="font-[950] text-[25px] mx-5
+                          md:text-[30px] md:mx-5
+                          lg:text-[60px] lg:mx-0 lg:ml-7">We help your brand to grow on social media.</h1>
+                <img src="assets/circle.png" alt="circle" class="sm:hidden md:hidden 
+                                                                 lg:absolute lg:w-[40px] lg:h-[40px] lg:left-[80%] lg:top-[50%] lg:-z-10">
+              </div>
+
+
+              <!-- This is discover more section -->
+              <div class="">
+                <div class="my-5">
+                  <img src="assets/star.png" alt="star" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5">
+                  <img src="assets/yield.png" alt="triangle" class="sm:hidden md:hidden 
+                                                                    lg:absolute lg:w-20px lg:h-[20px] lg:top-[70%] lg:left-[70%] lg:-z-10" style="transform: rotate(-10deg);">
+                  <h1 class="font-bold mx-5 lg:text-[20px]">Social Media Promotions</h1>
+                  <h3 class="mx-5 text-gray-400 lg:mr-[15%]">Penatibus at tempus ullamcorper cursus imperdiet lectus eleifend dolor eget vulputate</h3>
+                </div>
+
+                <div class="my-5">
+                  <img src="assets/graphic.png" alt="graphic" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5">
+                  <h1 class="font-bold mx-5 lg:text-[20px]">Growing & Scale Up Businesses</h1>
+                  <h3 class="mx-5 text-gray-400">Penatibus at tempus ullamcorper cursus imperdiet lectus eleifend dolor eget vulputate</h3>
+                </div>
+              </div>
+
+              <!-- This is discover more button -->
+              <div class="flex bg-[#6078ff] items-center justify-center w-[200px] rounded-2xl mb-12 mt-5 ml-7 mr-7 py-2 px-4 gap-[10px]">
+                <button class="text-white font-[700]">Discover More</button>
+                <img src="assets/playIcon.png" alt="play" class="w-[20px] h-[20px] rounded-full bg-white">
+              </div>
+            </div>
+          </div>
+
+          <!-- This is our value section -->
+          <div class="relative">
+            <img src="assets/girlInStudio.avif" alt="studio" class="w-full h-full object-cover
+                                                                    sm:min-h-[500px]">
+            <div class="bg-[#9999FF] absolute inset-0 z-10 opacity-50 
+                        sm:top-0 sm:w-[100%] h-[100%]"></div>
+            
+            <div data-aos="fade-up" data-aos-duration="1000" class="absolute top-[-20%] left-0 right-0 z-20 text-center flex flex-col items-center justify-center h-full">
+              <h1 class="font-bold text-white py-4">OUR VALUE</h1>
+              <h1 class="mx-5 text-white py-4 text-[22px] font-[800] sm:text-[18px] lg:text-[35px] lg:mx-[20%]">The Fluma Advantage: Transforming Brands, Empowering Influencers</h1>
+              <h1 class="text-white sm:mx-5 sm:text-center sm:text-[14px] mt-4 lg:mx-[20%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga ullam eveniet itaque culpa explicabo, debitis consequuntur cumque optio sapiente.</h1>
+            </div>
+            
+          </div>
+          
+
+          <!-- This is our value section cards -->
+          <div class="mt-12 sm:mb-[300%]
+                      md:grid md:grid-cols-3 md:mb-[10%] pb-10
+                      lg:grid lg:grid-cols-3 lg:pb-[10%]">
+
+            <div data-aos="fade-right" data-aos-duration="1000" class="flex flex-col mx-2 border-1 border-black z-30 bg-white justify-center items-center shadow-lg rounded-2xl sm:mx-2 sm:absolute sm:bg-white sm:top-[380%]">
+              <img src="assets/eye.png" alt="eye" class="w-[100px]">
+              <h1 class="font-[700] mt-5 mb-5">Our Vision</h1>
+              <h1 class="text-gray-400 text-center mx-2 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
+                asperiores quos quaerat similique neque fugiat.</h1>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col mx-2 border-1 border-black z-30 bg-white justify-center items-center shadow-lg rounded-2xl sm:mx-2 sm:absolute sm:bg-white sm:top-[480%]">
+              <img src="assets/objects.png" alt="eye" class="w-[100px]">
+              <h1 class="font-[700] mt-5 mb-5">Our Vision</h1>
+              <h1 class="text-gray-400 text-center mx-2 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
+                asperiores quos quaerat similique neque fugiat.</h1>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1000" class="flex flex-col mx-2 border-1 border-black z-30 bg-white justify-center items-center shadow-lg rounded-2xl sm:mx-2 sm:absolute sm:bg-white sm:top-[580%]">
+              <img src="assets/target.png" alt="eye" class="w-[100px]">
+              <h1 class="font-[700] mt-5 mb-5">Our Vision</h1>
+              <h1 class="text-gray-400 text-center mx-2 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
+                asperiores quos quaerat similique neque fugiat.</h1>
+            </div>
+
+          </div>
+
+          <!-- This is the "Discover More" section -->
+          <div class="relative flex flex-col items-center justify-center h-[450px]">
+            <img src="assets/girlInStudio.avif" alt="studio" class="absolute w-full h-full object-cover">
+            <!-- Purple Overlay -->
+            <div class="absolute inset-0 bg-[#9999FF] opacity-50"></div>
+            <!-- Headline Text -->
+            <h1 data-aos="zoom-in" class="relative z-10 text-center mx-5 text-white font-[800] text-[20px]
+                      lg:text-[35px] lg:mx-[25%]">
+                        Unlocking Possibilities with Fluma's Influencer Expertise.
+            </h1>
+            <!-- Description Text -->
+            <h1 data-aos="zoom-in" class="relative z-10 mx-5 text-center text-white mt-4
+                       lg:mx-[25%]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae 
+              fuga ullam eveniet itaque culpa explicabo, debitis consequuntur cumque optio sapiente.
+            </h1>
+            <!-- Button -->
+            <button data-aos="zoom-in" class="relative z-10 rounded-full bg-white font-[600] text-[#6078ff] px-6 py-2 mt-6">
+              DISCOVER MORE
+            </button>
+          </div>
+
+
+          <div class="lg:flex lg:mx-12">
+            <!-- This is why choose us image and text section -->
+            <div class="md:mx-12 relative lg:mx-12">
+              <img src="assets/whyChooseUs.jpg" alt="whyChooseUs" data-aos="flip-left" data-aos-duration="1000" class="clip-CurverCircle mt-16 mb-[20%] sm:px-3
+                                                                        md:px-6 md:ml-[15%] md:w-[80%]
+                                                                        lg:h-[550px]">
+              <img src="assets/socialMediaImg.png" alt="socialMediaImg" data-aos="zoom-in" data-aos-duration="1000" class="absolute sm:w-[200px] md:w-[350px] left-0 top-[35%] right-0 z-10
+                                                                                lg:w-[300px] lg:top-[70%] lg:left-0">
+              
+            </div>
+            
+            <!-- This is why choose us cards section -->
+            <div data-aos="fade-left" data-aos-duration="1000" class="md:mx-12">
+              <h1 class="mt-12 font-[700] text-[13px] text-[#6078ff] mx-3">WHY CHOOSE US</h1>
+              <h1 class="mt-4 font-[700] text-[25px] text-black mx-3">Optimize your social efforts for greater impact.</h1>
+              <h1 class="mt-4 font-[500] text-[15px] text-gray-400 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus corrupti iusto minus voluptates accusantium iure sequi nemo amet porro. Alias.</h1>
+              
+              <div class="my-10">
+                <img src="assets/star.png" alt="star" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5">
+                <h1 class="font-bold mx-5">Promote your product & brand</h1>
+                <h3 class="mx-5 text-gray-400">Penatibus at tempus ullamcorper cursus imperdiet lectus eleifend dolor eget vulputate</h3>
+              </div>
+              
+              <div class="my-10">
+                <img src="assets/graphic.png" alt="star" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5">
+                <h1 class="font-bold mx-5">Growing & Scale Up Businesses</h1>
+                <h3 class="mx-5 text-gray-400">Penatibus at tempus ullamcorper cursus imperdiet lectus eleifend dolor eget vulputate</h3>
+              </div>
+              
+              <div class="my-10">
+                <img src="assets/objects.png" alt="star" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5">
+                <h1 class="font-bold mx-5">Success Campaign on Social</h1>
+                <h3 class="mx-5 text-gray-400">Penatibus at tempus ullamcorper cursus imperdiet lectus eleifend dolor eget vulputate</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- This is testimonial section -->
+          <div class="flex flex-col items-center text-center justify-center mt-5 pb-5 pt-6 bg-[#F5F5F5]">
+            <!-- Testimonial Text Area -->
+            <div data-aos="fade-down" data-aos-duration="1000" class="">
+                <h1 class="text-[#6078ff] font-[700] text-[13px] lg:text-[20px]">TESTIMONIAL</h1>
+                <h1 class="text-black font-[650] mt-5 text-[25px] lg:text-[30px]">Client Reviews & Feedback</h1>
+                <h1 class="text-gray-400 font-[400] mt-5 text-[15px] mx-5 lg:mx-[10%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est omnis quod ea eum consectetur recusandae maxime inventore error cupiditate sunt!</h1>
+            </div>
+            <!-- Testimonial Slider -->
+            <div class="w-full mt-12">
+                <!-- Testimonial Cards -->
+                <div id="testimonial-slider" class="flex transition-transform duration-500 lg:ml-20">
+                    <!-- Slide 1 -->
+                    <div class="bg-white pt-8 pb-8 flex flex-col items-center ml-2 mr-2 rounded-xl shadow-lg flex-shrink-0
+                                sm:w-[300px]
+                                md:w-[430px]
+                                lg:w-[450px]">
+                        <img src="assets/testimonialImg1.jpg" alt="review1" class="w-[80px] h-[80px] mb-5 rounded-full object-cover">
+                        <p class="text-gray-700 px-6">As an influencer, I've had the pleasure of working with Fluma on several campaigns. Their professionalism and attention to detail are unmatched. Fluma truly cares about the success of both influencers and brands, making collaborations a breeze.</p>
+                        <h1 class="italic text-black font-[600] mt-8">Emily Carter</h1>
+                        <h1 class="italic text-[#6078ff] font-[500]">Jakarta</h1>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="bg-white pt-8 pb-8 flex flex-col items-center ml-2 mr-2 rounded-xl shadow-lg flex-shrink-0
+                                sm:w-[300px]
+                                md:w-[430px]
+                                lg:w-[450px]">
+                        <img src="assets/testimonialImg2.jpg" alt="review2" class="w-[80px] h-[80px] mb-5 rounded-full object-cover">
+                        <p class="text-gray-700 px-6">Fluma helped our brand reach new heights. Their innovative approach to influencer marketing is truly impressive. We've seen amazing results from our collaboration.</p>
+                        <h1 class="italic text-black font-[600] mt-8">John Doe</h1>
+                        <h1 class="italic text-[#6078ff] font-[500]">New York</h1>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="bg-white pt-8 pb-8 flex flex-col items-center ml-2 mr-2 rounded-xl shadow-lg flex-shrink-0
+                                sm:w-[300px]
+                                md:w-[430px]
+                                lg:w-[450px]">
+                        <img src="assets/testimonialImg3.jpg" alt="review3" class="w-[80px] h-[80px] mb-5 rounded-full object-cover">
+                        <p class="text-gray-700 px-6">I've worked with many agencies, but Fluma stands out. Their dedication to understanding our brand and target audience has made a significant impact on our campaigns.</p>
+                        <h1 class="italic text-black font-[600] mt-8">Jane Smith</h1>
+                        <h1 class="italic text-[#6078ff] font-[500]">London</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination Dots -->
+            <div class="flex space-x-2 mt-4">
+                <div class="dot w-3 h-3 bg-[#6078ff] rounded-full cursor-pointer" onclick="moveSlider(0)"></div>
+                <div class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" onclick="moveSlider(1)"></div>
+                <div class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" onclick="moveSlider(2)"></div>
+            </div>
+          </div>
+
+          <!-- This is our experience section -->
+          <div class="relative mt-10 flex flex-col items-center justify-center h-[500px] md:flex-row">
+            <!-- Background image (full width on small screens, spans both sides on medium screens) -->
+            <img src="assets/girlInStudio.avif" alt="studio" class="absolute h-[500px] w-full object-cover md:w-full md:left-0">
+
+            <!-- Purple overlay (covers the entire background image) -->
+            <div class="absolute inset-0 bg-[#9999FF] opacity-50"></div>
+
+            <!-- Black overlay (covers the entire background image) -->
+            <div class="absolute inset-0 bg-gray-300 rounded-2xl opacity-50 sm:m-3 md:m-5 lg:w-[700px] lg:h-[95%] lg:top-3 lg:left-[35%]"></div>
+            
+            <!-- Text and progress bars container -->
+            <div class="relative z-30 flex flex-col items-center justify-center w-full px-4 md:w-[70%] md:ml-auto md:mr-auto md:items-start md:text-left md:mr-[5%] md:ml-[5%]">
+              <!-- Text content -->
+              <div class="text-left w-full sm:px-[10%]">
+                <h1 class="font-bold text-white text-[24px] sm:text-[15px] mb-4
+                           lg:ml-[38%] lg:text-[15px]">OUR EXPERIENCE</h1>
+                <h2 class="font-[700] text-[18px] sm:text-[22px] text-white mb-4
+                           lg:ml-[38%] lg:text-[30px] lg:mx-[32%]">You inspire us and give us energy each and every night!</h2>
+                <p class="text-white text-[14px] sm:text-[16px] mb-6
+                          lg:ml-[38%] lg:text-[16px] lg:mx-[32%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga ullam eveniet itaque culpa explicabo, debitis consequuntur cumque optio sapiente.</p>
+              </div>
+              
+              <!-- Progress bars -->
+              <div class="w-full mt-8">
+                <div class="mb-4">
+                  <div class="flex justify-between text-white mb-1
+                              lg:ml-[38%]">
+                    <span class="font-[650] text-[13px]">SUCCESS CAMPAIGN</span>
+                    <span class="font-[600] text-[13px] 
+                                  lg:mr-[52%]">85%</span>
+                  </div>
+                  <div class="w-full h-[10px] bg-gray-300 rounded-full overflow-hidden lg:w-[30%] lg:ml-[38%]">
+                    <div class="h-full bg-gradient-to-r from-[#7B3FE4] to-[#E93EFF] rounded-full" data-aos="fade-right" data-aos-duration="2000" style="width: 85%;"></div>
+                  </div>
+                </div>
+                
+                <div class="mb-4">
+                  <div class="flex justify-between text-white mb-1
+                              lg:ml-[38%]">
+                    <span class="font-[650] text-[13px]">PROMOTE BRAND</span>
+                    <span class="font-[600] text-[13px]
+                                lg:mr-[52%]">92%</span>
+                  </div>
+                  <div class="w-full h-[10px] bg-gray-300 rounded-full overflow-hidden
+                              lg:w-[30%] lg:ml-[38%]">
+                    <div class="h-full bg-gradient-to-r from-[#7B3FE4] to-[#E93EFF] rounded-full" data-aos="fade-right" data-aos-duration="2000" style="width: 92%;"></div>
+                  </div>
+                </div>
+                
+                <div class="mb-4">
+                  <div class="flex justify-between text-white mb-1
+                              lg:ml-[38%]">
+                    <span class="font-[650] text-[13px]">PROJECT DONE</span>
+                    <span class="font-[600] text-[13px]
+                                lg:mr-[52%]">67%</span>
+                  </div>
+                  <div class="w-full h-[10px] bg-gray-300 rounded-full overflow-hidden
+                              lg:w-[30%] lg:ml-[38%]">
+                    <div class="h-full bg-gradient-to-r from-[#7B3FE4] to-[#E93EFF] rounded-full" data-aos="fade-right" data-aos-duration="2000" style="width: 67%;"></div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <div class="flex justify-between text-white mb-1
+                              lg:ml-[38%]">
+                    <span class="font-[650] text-[13px]">CONTENT CREATIONS</span>
+                    <span class="font-[600] text-[13px]
+                                lg:mr-[52%]">89%</span>
+                  </div>
+                  <div class="w-full h-[10px] bg-gray-300 rounded-full overflow-hidden
+                              lg:w-[30%] lg:ml-[38%]">
+                    <div class="h-full bg-gradient-to-r from-[#7B3FE4] to-[#E93EFF] rounded-full" data-aos="fade-right" data-aos-duration="2000" style="width: 89%;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- This is out talent section -->
+          <div class="relative
+                      md:grid md:grid-cols-3
+                      lg:grid lg:grid-cols-3 lg:mx-[20%]">
+            <!-- This is Card1 -->
+            <div class="mt-5 ml-7 mr-7 sm:mb-[200px] pb-12">
+                <!-- This is talent section text -->
+                <h1 class="font-[650] text-[20px] mb-12">Meet our talent</h1>
+                <!-- This is talent section image -->
+                 <div class="relative">
+                   <div class="absolute inset-0 rounded-2xl bg-[#9999FF] opacity-50"></div>
+                   <img src="assets/talent1.jpg" alt="talent1" class="rounded-2xl w-full">
+                  </div>
+                <!-- This is talent section card -->
+                <div class="flex flex-col mx-5 z-30 bg-white justify-center items-center border-1 border-black shadow-lg rounded-2xl py-6
+                            sm:absolute sm:top-[10%] sm:left-0
+                            md:flex md:flex-col md:border-[1px] md:border-black md:mx-0 md:p-5
+                            lg:flex lg:flex-col lg:border-[1px] lg:border-gray-400 lg:mx-0 lg:p-5">
+                    <h1 class="font-[600] text-[15px] mt-5">David Kim</h1>
+                    <h1 class="font-[650] text-[#295BFF] text-[13px]">TECH ENTHUSIAST</h1>
+                    <div class="flex gap-[17px] mt-5">
+                        <i class="fa-brands fa-facebook-f text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                        <i class="fa-brands fa-instagram text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                        <i class="fa-brands fa-tiktok text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                        <i class="fa-brands fa-youtube text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                    </div>
+                    <div class="m-5">
+                        <p class="text-center text-[13px] font-[500] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptates excepturi dolorem vel porro.</p>
+                    </div>
+                </div>
+                <div class=""></div>
+            </div>
+        
+            <!-- This is card2 -->
+            <div class="mt-5 ml-7 mr-7 mb-[200px] pb-12 
+                        md:mt-[37%]
+                        lg:mt-[32%]">
+              <!-- This is talent section image -->
+               <div class="relative">
+                 <div class="absolute inset-0 bg-[#9999FF] rounded-2xl opacity-50"></div>
+                 <img src="assets/talent2.jpg" alt="talent2" class="rounded-2xl w-full">
+                </div>
+              <!-- This is talent section card -->
+              <div class="flex flex-col mx-5 z-30 bg-white justify-center items-center border-1 border-black shadow-lg rounded-2xl py-6
+                          sm:absolute sm:top-[25%] sm:left-0
+                          md:flex md:flex-col md:border-[1px] md:border-gray-400 md:mx-0 md:p-5
+                          lg:flex lg:flex-col lg:border-[1px] lg:border-gray-400 lg:mx-0 lg:p-5">
+                <h1 class="font-[600] text-[15px] mt-5">David Kim</h1>
+                <h1 class="font-[650] text-[#295BFF] text-[13px]">TECH ENTHUSIAST</h1>
+                <div class="flex gap-[17px] mt-5">
+                  <i class="fa-brands fa-facebook-f text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-instagram text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-tiktok text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-youtube text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                </div>
+                <div class="m-5">
+                  <p class="text-center text-[13px] font-[500] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptates excepturi dolorem vel porro.</p>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+            
+            <!-- This is card3 -->
+            <div class="mt-5 ml-7 mr-7 mb-[200px] pb-12
+                        md:mt-[37%]
+                        lg:mt-[32%]">
+              <!-- This is talent section image -->
+              <div class="relative">
+                <div class="absolute inset-0 bg-[#9999FF] rounded-2xl opacity-50"></div>
+                <img src="assets/talent3.jpg" alt="talent2" class="rounded-2xl w-full">
+               </div>
+              <!-- This is talent section card -->
+              <div class="flex flex-col mx-5 z-30 bg-white justify-center items-center border-1 border-black shadow-lg rounded-2xl py-6
+                          sm:absolute sm:top-[42%] sm:left-0
+                          md:flex md:flex-col md:border-[1px] md:border-black md:mx-0 md:p-5
+                          lg:flex lg:flex-col lg:border-[1px] lg:border-gray-400 lg:mx-0 lg:p-5">
+                <h1 class="font-[600] text-[15px] mt-5">David Kim</h1>
+                <h1 class="font-[650] text-[#295BFF] text-[13px]">TECH ENTHUSIAST</h1>
+                <div class="flex gap-[17px] mt-5">
+                  <i class="fa-brands fa-facebook-f text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-instagram text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-tiktok text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-youtube text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                </div>
+                <div class="m-5">
+                  <p class="text-center text-[13px] font-[500] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptates excepturi dolorem vel porro.</p>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+
+            <!-- This is card4 -->
+            <div class="mt-5 ml-7 mr-7 mb-[200px] pb-12">
+              <!-- This is talent section image -->
+              <div class="relative">
+                <div class="absolute inset-0 bg-[#9999FF] rounded-2xl opacity-50"></div>
+                <img src="assets/talent4.jpg" alt="talent3" class="rounded-2xl w-full">
+               </div>
+              <!-- This is talent section card -->
+              <div class="flex flex-col mx-5 z-30 bg-white justify-center items-center border-1 border-black shadow-lg rounded-2xl py-6
+                          sm:absolute sm:top-[58%] sm:left-0
+                          md:flex md:flex-col md:border-[1px] md:border-black md:mx-0 md:p-5
+                          lg:flex lg:flex-col lg:border-[1px] lg:border-gray-400 lg:mx-0 lg:p-5">
+                <h1 class="font-[600] text-[15px] mt-5">David Kim</h1>
+                <h1 class="font-[650] text-[#295BFF] text-[13px]">TECH ENTHUSIAST</h1>
+                <div class="flex gap-[17px] mt-5">
+                  <i class="fa-brands fa-facebook-f text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-instagram text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-tiktok text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-youtube text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                </div>
+                <div class="">
+                  <p class="text-center text-[13px] font-[500] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptates excepturi dolorem vel porro.</p>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+
+            <!-- This is card5 -->
+            <div class="mt-5 ml-7 mr-7 mb-[200px] pb-12">
+              <!-- This is talent section image -->
+              <div class="relative">
+                <div class="absolute inset-0 bg-[#9999FF] rounded-2xl opacity-50"></div>
+                <img src="assets/talent5.jpg" alt="talent5" class="rounded-2xl w-full">
+               </div>
+              <!-- This is talent section card -->
+              <div class="flex flex-col mx-5 z-30 bg-white justify-center items-center border-1 border-black shadow-lg rounded-2xl py-6
+                          sm:absolute sm:top-[74%] sm:left-0
+                          md:flex md:flex-col md:border-[1px] md:border-black md:mx-0 md:p-5
+                          lg:flex lg:flex-col lg:border-[1px] lg:border-gray-400 lg:mx-0 lg:p-5">
+                <h1 class="font-[600] text-[15px] mt-5">David Kim</h1>
+                <h1 class="font-[650] text-[#295BFF] text-[13px]">TECH ENTHUSIAST</h1>
+                <div class="flex gap-[17px] mt-5">
+                  <i class="fa-brands fa-facebook-f text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-instagram text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-tiktok text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-youtube text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                </div>
+                <div class="">
+                  <p class="text-center text-[13px] font-[500] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptates excepturi dolorem vel porro.</p>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+
+            <!-- This is card6 -->
+            <div class="mt-5 ml-7 mr-7 mb-[200px] pb-12">
+              <!-- This is talent section image -->
+              <div class="relative">
+                <div class="absolute inset-0 bg-[#9999FF] rounded-2xl opacity-50"></div>
+                <img src="assets/talent6.jpg" alt="talent6" class="rounded-2xl w-full">
+               </div>
+              <!-- This is talent section card -->
+              <div class="flex flex-col mx-5 z-30 bg-white justify-center items-center border-1 border-black shadow-lg rounded-2xl py-6
+                          sm:absolute sm:top-[90%] sm:left-0
+                          md:flex md:flex-col md:border-[1px] md:border-black md:mx-0 md:p-5
+                          lg:flex lg:flex-col lg:border-[1px] lg:border-gray-400 lg:mx-0 lg:p-5">
+                <h1 class="font-[600] text-[15px] mt-5">David Kim</h1>
+                <h1 class="font-[650] text-[#295BFF] text-[13px]">TECH ENTHUSIAST</h1>
+                <div class="flex gap-[17px] mt-5">
+                  <i class="fa-brands fa-facebook-f text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-instagram text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-tiktok text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                  <i class="fa-brands fa-youtube text-[#295BFF] bg-[#F0F2FF] rounded-[100px] p-2"></i>
+                </div>
+                <div class="">
+                  <p class="text-center text-[13px] font-[500] text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, atque voluptates excepturi dolorem vel porro.</p>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+
+          </div>
+          
+
+          
+          <!-- This is footer section -->
+          <div class="md:mt-[10px]">
+            <div class="flex flex-col justify-center items-center bg-[#1d1d3c] pt-10">
+              <img src="assets/flumaWhiteIcon.png" alt="flumaIcon" class="mb-5 w-[150px]">
+              <p class="text-white text-center mx-2 lg:mx-[20%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi magni nam ratione quasi. Natus aspernatur doloribus error
+                 fuga aliquam repellendus repellat eum expedita unde minima earum modi, dolor debitis commodi!</p>
+            </div>
+            <div class="flex justify-center items-center gap-[15px] bg-[#1d1d3c] pt-10">
+              <i class="fa-brands fa-facebook-f p-2 bg-[#69727d] text-white rounded-full"></i>
+              <i class="fa-brands fa-instagram p-2 bg-[#69727d] text-white rounded-full"></i>
+              <i class="fa-brands fa-tiktok p-2 bg-[#69727d] text-white rounded-full"></i>
+              <i class="fa-brands fa-twitter p-2 bg-[#69727d] text-white rounded-full"></i>
+              <i class="fa-brands fa-youtube p-2 bg-[#69727d] text-white rounded-full"></i>
+            </div>
+            <div class="flex flex-col items-center text-center justify-center pt-10 pb-12 bg-[#1d1d3c] gap-[15px]">
+              <h1 class="text-white font-[600]">Support</h1>
+              <ul>
+                <li class="text-gray-300 text-[13px] py-1">Contact us</li>
+                <li class="text-gray-300 text-[13px] py-1">Help Center</li>
+                <li class="text-gray-300 text-[13px] py-1">FAQ</li>
+                <li class="text-gray-300 text-[13px] py-1">Community & Forums</li>
+              </ul>
+            </div>
+          </div>
+
+  </div>
+
+
+
+
+
+  <!-- This is talwind screen resolutions code -->
+  <script>
+        tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+          },
+          screens: {
+            'sm': {'min': '200px', 'max': '600px'},   
+            'md': {'min':'601px', 'max':'999px'},
+            'lg': {'min':'1000px', 'max':'1700px'},            
+          },
+        },
+      },
+    }
+  </script>
+
+  <script>
+      document.getElementById('hamburger').addEventListener('click', function() {
+      const menu = document.getElementById('menu');
+      const hamburger = document.getElementById('hamburger');
+      
+      if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+          hamburger.textContent = '×'; // Change to "X"
+      } else {
+          menu.classList.add('hidden');
+          hamburger.textContent = '☰'; // Change back to hamburger
+      }
+    });
+
+    document.getElementById('close').addEventListener('click', function() {
+      const menu = document.getElementById('menu');
+      const hamburger = document.getElementById('hamburger');
+      
+      menu.classList.add('hidden');
+      hamburger.textContent = '☰'; // Change back to hamburger
+    });
+  </script>
+
+
+  <!-- Donw make any changes in this script - as it is for animations -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
