@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+     <link rel="stylesheet" href="Custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js" defer></script>
     <title>Fluma Web Design</title>
@@ -41,6 +42,33 @@
         }
     </style>
 
+    <style>
+      @media (min-width: 375px) and (max-width: 377px) and (min-height: 667px) and (max-height:668px) 
+      {
+        .iphoneSE {
+          z-index: 10;
+        }
+        .iphoneSE-Container
+        {
+          position: absolute;
+          top: 200px;
+          margin-bottom: 90%;
+        }
+      }
+      @media (min-width: 412px) and (max-width: 416px) and (min-height: 894px) and (max-height:898px) 
+      {
+        .iphoneXR 
+        {
+          z-index: 10;
+        }
+        .iphoneXR-Container
+        {
+          position: absolute;
+          top: 90%;
+          margin-bottom: 50%;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -49,60 +77,61 @@
           <!-- Navbar section -->
           <div class="flex items-center justify-between w-full p-4 bg-white lg:bg-transparent">
             <!-- Logo -->
-            <img src="assets/flumaIcon.png" alt="flumaIcon" class="w-[100px] md:w-[150px] lg:w-[150px] lg:h-[50px] lg:mx-5">
+            <a href="index.html">
+              <img src="assets/flumaIcon.png" alt="flumaIcon" class="w-[100px] md:w-[150px] lg:w-[150px] lg:h-[50px] lg:mx-5">
+            </a>
 
             <!-- Hamburger Icon -->
             <span id="hamburger" class="text-[20px] font-bold cursor-pointer lg:hidden">☰</span>
 
-            <!-- Menu -->
+            <!-- Desktop Menu -->
             <div id="menu" class="hidden lg:flex lg:items-center lg:gap-4">
               <a href="pricing.html" class="text-[20px] hover:text-[#295BFF] font-[650] bg-[#6078ff] text-white px-4 py-2 rounded-lg lg:bg-transparent lg:text-black lg:px-6">Pricing</a>
               <a href="contact.html" class="text-[20px] hover:text-[#295BFF] font-[650] lg:text-black lg:px-6">Contact Us</a>
             </div>
 
-            <!-- Close Icon for Mobile -->
-            <span id="close" class="text-[30px] font-bold cursor-pointer absolute top-4 right-4 hidden lg:hidden">x</span>
-          </div>
-
-          <!-- Mobile Menu (hidden by default) -->
-          <div id="mobile-menu" class="fixed top-0 right-0 w-full h-screen bg-white shadow-lg flex flex-col items-center pt-20 space-y-4 lg:hidden hidden">
-            <span id="close" class="text-[30px] font-bold cursor-pointer absolute top-4 right-4">x</span>
-            <a href="#home" class="text-[20px] font-[650] bg-[#6078ff] text-white px-6 py-3 rounded-lg">Home</a>
-            <a href="#pricing" class="text-[20px] font-[650]">Pricing</a>
+            <!-- Mobile Menu (hidden by default) -->
+            <div id="mobile-menu" class="fixed top-0 right-0 w-full h-[300px] bg-white shadow-lg flex flex-col pt-20 space-y-4 lg:hidden hidden">
+              <span id="close-mobile-menu" class="text-[50px] text-[#3333FF] cursor-pointer absolute top-1 right-4">×</span>
+              <a href="index.html" class="text-[20px] font-[650] bg-[#6078ff] text-white px-6 py-3 rounded-lg pl-5">Home</a>
+              <a href="pricing.html" class="text-[20px] font-[650] pl-5">Pricing</a>
+              <a href="contact.html" class="text-[20px] font-[650] pl-5">Contact Us</a>
+            </div>
           </div>
 
 
           <!-- This is the whole header section - specific for dekstop screen -->
-          <div class="lg:flex lg:ml-20">
+          <div class="lg:flex lg:ml-10 lg:p-4">
             <!-- This is header section -->
-            <div class="lg:flex lg:justify-between lg:items-start p-4">
+            <div class="lg:flex lg:justify-between lg:items-start px-4">
               <!-- This is images section in header -->
               <div class="flex sm:flex-col sm:justify-center sm:items-center
-                          md:grid md:grid-cols-2 md:ml-[10%] md:mt-12
-                          lg:grid lg:grid-cols-2 lg:gap-4 lg:mx-2">
+                          md:grid md:grid-cols-2 md:mx-[20%] md:ml-[25%] md:gap-4 md:mt-12
+                          lg:grid lg:grid-cols-2 lg:gap-3 lg:mx-[20%]">
                 <img src="assets/homeImg1.jpg" alt="homeImg1" data-aos="zoom-in" class="clip-triangle w-[150px] h-[150px] sm:mt-10 sm:mb-3
-                                                                     md:w-[250px] md:h-[250px]
-                                                                     lg:w-[350px] lg:h-[300px]">
+                                                                     md:w-[200px] md:h-[200px]
+                                                                     lg:w-[350px] lg:h-[200px]">
                 <img src="assets/homeImg2.jpg" alt="homeImg2" data-aos="zoom-in" class="clip-circle -z-10 w-[250px] mb-5
-                                                                     md:w-[250px] md:h-[250px] md:object-cover
-                                                                     lg:w-[550px] lg:h-[300px] lg:object-cover">
+                                                                     md:w-[200px] md:h-[200px] md:object-cover
+                                                                     lg:w-[550px] lg:h-[200px] lg:object-cover">
                 <img src="assets/homeImg3.jpg" alt="homeImg3" data-aos="zoom-in" class="clip-square h-[150px] w-[150px] mb-5
-                                                                     md:w-[250px] md:h-[250px]
-                                                                     lg:w-[350px] lg:h-[300px]">
+                                                                     md:w-[200px] md:h-[200px]
+                                                                     lg:w-[350px] lg:h-[200px]">
                 <img src="assets/homeImg4.jpg" alt="homeImg4" data-aos="zoom-in" class="clip-drop h-[150px] w-[150px] mb-5
-                                                                     md:w-[250px] md:h-[250px]
-                                                                     lg:w-[350px] lg:h-[300px]">
-                <img src="assets/yield.png" alt="yield" data-aos="zoom-in" class="sm:hidden md:w-[30px] md:ml-[50%] 
+                                                                     md:w-[200px] md:h-[200px]
+                                                                     lg:w-[350px] lg:h-[200px]">
+                <img src="assets/yield.png" alt="yield" data-aos="zoom-in" class="sm:hidden 
+                                                               md:absolute md:left-[80%] md:top-[40%] md:-z-10 md:w-[30px] md:h-[30px] 
                                                                lg:absolute lg:left-[80%] lg:top-[40%] lg:-z-10 lg:w-[30px] lg:h-[30px]"style="transform: rotate(-30deg);">
               </div>
             </div>
 
-            <div class="lg:flex lg:flex-col " data-aos="fade-left" data-aos-duration="1000">           
+            <div class="md:mx-20 lg:flex lg:flex-col" data-aos="fade-left" data-aos-duration="1000">           
               <!-- This is text section in header -->
               <div class="">
                 <h1 class="font-[950] text-[25px] mx-5
                           md:text-[30px] md:mx-5
-                          lg:text-[60px] lg:mx-0 lg:ml-7">We help your brand to grow on social media.</h1>
+                          lg:text-[50px] lg:mx-0 lg:mr-[15%]">We help your brand to grow on social media.</h1>
                 <img src="assets/circle.png" alt="circle" class="sm:hidden md:hidden 
                                                                  lg:absolute lg:w-[40px] lg:h-[40px] lg:left-[80%] lg:top-[50%] lg:-z-10">
               </div>
@@ -111,7 +140,8 @@
               <!-- This is discover more section -->
               <div class="">
                 <div class="my-5">
-                  <img src="assets/star.png" alt="star" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5">
+                  <img src="assets/star.png" alt="star" class="bg-[#f0f2ff] rounded-full p-2 w-[50px] mx-5
+                                                                 md:w-[50px]">
                   <img src="assets/yield.png" alt="triangle" class="sm:hidden md:hidden 
                                                                     lg:absolute lg:w-20px lg:h-[20px] lg:top-[70%] lg:left-[70%] lg:-z-10" style="transform: rotate(-10deg);">
                   <h1 class="font-bold mx-5 lg:text-[20px]">Social Media Promotions</h1>
@@ -134,44 +164,65 @@
           </div>
 
           <!-- This is our value section -->
-          <div class="relative">
-            <img src="assets/girlInStudio.avif" alt="studio" class="w-full h-full object-cover
-                                                                    sm:min-h-[500px]">
+          <div class="relative
+                      iphoneSE-Container
+                      iphoneXR-Container
+                      md:mb-[50%]
+                      lg:mb-[20%]">
+            <img src="assets/girlInStudio.avif" alt="studio" class="w-full h-[500px] object-cover
+                                                                    sm:h-[500px]
+                                                                    md:h-[350px]">
             <div class="bg-[#9999FF] absolute inset-0 z-10 opacity-50 
                         sm:top-0 sm:w-[100%] h-[100%]"></div>
             
-            <div data-aos="fade-up" data-aos-duration="1000" class="absolute top-[-20%] left-0 right-0 z-20 text-center flex flex-col items-center justify-center h-full">
+            <div data-aos="fade-up" data-aos-duration="1000" class="absolute top-[-20%] left-0 right-0 z-20 text-center flex flex-col items-center justify-center h-full
+                                                                    md:mx-12">
               <h1 class="font-bold text-white py-4">OUR VALUE</h1>
               <h1 class="mx-5 text-white py-4 text-[22px] font-[800] sm:text-[18px] lg:text-[35px] lg:mx-[20%]">The Fluma Advantage: Transforming Brands, Empowering Influencers</h1>
               <h1 class="text-white sm:mx-5 sm:text-center sm:text-[14px] mt-4 lg:mx-[20%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga ullam eveniet itaque culpa explicabo, debitis consequuntur cumque optio sapiente.</h1>
             </div>
             
           </div>
-          
+
 
           <!-- This is our value section cards -->
-          <div class="mt-12 sm:mb-[300%]
-                      md:grid md:grid-cols-3 md:mb-[10%] pb-10
-                      lg:grid lg:grid-cols-3 lg:pb-[10%]">
+          <div class="iphoneSE iphoneXR-Container mt-12 sm:mb-[250%]
+                      md:flex md:absolute md:top-[210%] md:mb-6 md:px-3
+                      lg:flex lg:absolute lg:top-[150%] lg:mb-6 lg:mx-[15%] lg:mb-[90%]">
 
-            <div data-aos="fade-right" data-aos-duration="1000" class="flex flex-col mx-2 border-1 border-black z-30 bg-white justify-center items-center shadow-lg rounded-2xl sm:mx-2 sm:absolute sm:bg-white sm:top-[380%]">
-              <img src="assets/eye.png" alt="eye" class="w-[100px]">
-              <h1 class="font-[700] mt-5 mb-5">Our Vision</h1>
-              <h1 class="text-gray-400 text-center mx-2 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
+            <div data-aos="fade-right" data-aos-duration="1000" class="flex flex-col px-4 py-[10%] border-[1px] border-gray-400 z-30 bg-white justify-center items-center shadow-lg rounded-2xl 
+             sm:mx-2 sm:absolute sm:bg-white sm:top-[270%]
+             md:mx-3 md:py-[3%]
+             lg:mx-5 lg:py-0">
+              <span class="bg-[#f0f2ff] flex justify-center rounded-full p-3">
+                <i class="fa-solid fa-eye text-[25px] text-[#3399FF]"></i>
+              </span>
+              <h1 class="font-[700] mt-2 mb-5">Our Vision</h1>
+              <h1 class="text-gray-400 text-center py-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
                 asperiores quos quaerat similique neque fugiat.</h1>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col mx-2 border-1 border-black z-30 bg-white justify-center items-center shadow-lg rounded-2xl sm:mx-2 sm:absolute sm:bg-white sm:top-[480%]">
-              <img src="assets/objects.png" alt="eye" class="w-[100px]">
-              <h1 class="font-[700] mt-5 mb-5">Our Vision</h1>
-              <h1 class="text-gray-400 text-center mx-2 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
+            <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col px-4 py-2 border-[1px] py-[10%] border-gray-400 z-30 bg-white justify-center items-center shadow-lg rounded-2xl 
+             sm:mx-2 sm:absolute sm:bg-white sm:top-[330%]
+             md:mx-3 md:py-[3%]
+             lg:mx-5 lg:py-0">
+              <span class="bg-[#f0f2ff] flex justify-center rounded-full p-3">
+                <i class="fa-sharp-duotone fa-solid fa-icons text-[25px] text-[#3399FF]"></i>
+              </span>
+              <h1 class="font-[700] mt-2 mb-5">Our Vision</h1>
+              <h1 class="text-gray-400 text-center mx-2 py-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
                 asperiores quos quaerat similique neque fugiat.</h1>
             </div>
 
-            <div data-aos="fade-left" data-aos-duration="1000" class="flex flex-col mx-2 border-1 border-black z-30 bg-white justify-center items-center shadow-lg rounded-2xl sm:mx-2 sm:absolute sm:bg-white sm:top-[580%]">
-              <img src="assets/target.png" alt="eye" class="w-[100px]">
-              <h1 class="font-[700] mt-5 mb-5">Our Vision</h1>
-              <h1 class="text-gray-400 text-center mx-2 py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
+            <div data-aos="fade-left" data-aos-duration="1000" class="flex flex-col px-4 py-2 border-[1px] py-[10%] border-gray-400 z-30 bg-white justify-center items-center shadow-lg rounded-2xl 
+             sm:mx-2 sm:absolute sm:bg-white sm:top-[390%]
+             md:mx-3 md:py-[3%]
+             lg:mx-5 lg:py-[1%]">
+              <span class="bg-[#f0f2ff] flex justify-center rounded-full p-3">
+                <i class="fa-solid fa-bullseye text-[25px] text-[#3399FF]"></i>
+              </span>
+              <h1 class="font-[700] mt-2 mb-5">Our Vision</h1>
+              <h1 class="text-gray-400 text-center mx-2 py-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quis necessitatibus laudantium eius facere 
                 asperiores quos quaerat similique neque fugiat.</h1>
             </div>
 
@@ -194,7 +245,8 @@
               fuga ullam eveniet itaque culpa explicabo, debitis consequuntur cumque optio sapiente.
             </h1>
             <!-- Button -->
-            <button data-aos="zoom-in" class="relative z-10 rounded-full bg-white font-[600] text-[#6078ff] px-6 py-2 mt-6">
+            <button data-aos="zoom-in" class="relative z-10 rounded-full bg-white font-[600] text-[#6078ff] px-6 py-2 mt-6 
+                                              sm:font-[650] text-[15px]">
               DISCOVER MORE
             </button>
           </div>
@@ -206,7 +258,7 @@
               <img src="assets/whyChooseUs.jpg" alt="whyChooseUs" data-aos="flip-left" data-aos-duration="1000" class="clip-CurverCircle mt-16 mb-[20%] sm:px-3
                                                                         md:px-6 md:ml-[15%] md:w-[80%]
                                                                         lg:h-[550px]">
-              <img src="assets/socialMediaImg.png" alt="socialMediaImg" data-aos="zoom-in" data-aos-duration="1000" class="absolute sm:w-[200px] md:w-[350px] left-0 top-[35%] right-0 z-10
+              <img src="assets/socialMediaImg.png" alt="socialMediaImg" data-aos="zoom-in" data-aos-duration="1000" class="absolute sm:w-[170px] sm:top-[65%] md:w-[350px] md:top-[50%] left-0 right-0 z-10
                                                                                 lg:w-[300px] lg:top-[70%] lg:left-0">
               
             </div>
@@ -304,11 +356,11 @@
             <div class="relative z-30 flex flex-col items-center justify-center w-full px-4 md:w-[70%] md:ml-auto md:mr-auto md:items-start md:text-left md:mr-[5%] md:ml-[5%]">
               <!-- Text content -->
               <div class="text-left w-full sm:px-[10%]">
-                <h1 class="font-bold text-white text-[24px] sm:text-[15px] mb-4
-                           lg:ml-[38%] lg:text-[15px]">OUR EXPERIENCE</h1>
-                <h2 class="font-[700] text-[18px] sm:text-[22px] text-white mb-4
+                <h1 class="font-bold text-white text-[24px] sm:text-[15px] mb-2
+                           lg:ml-[38%] lg:text-[13px] lg:mt-[1%]">OUR EXPERIENCE</h1>
+                <h2 class="font-[700] text-[18px] sm:text-[22px] text-white mb-2
                            lg:ml-[38%] lg:text-[30px] lg:mx-[32%]">You inspire us and give us energy each and every night!</h2>
-                <p class="text-white text-[14px] sm:text-[16px] mb-6
+                <p class="text-white text-[14px] sm:text-[16px] mb-4
                           lg:ml-[38%] lg:text-[16px] lg:mx-[32%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga ullam eveniet itaque culpa explicabo, debitis consequuntur cumque optio sapiente.</p>
               </div>
               
@@ -544,8 +596,6 @@
 
           </div>
           
-
-          
           <!-- This is footer section -->
           <div class="md:mt-[10px]">
             <div class="flex flex-col justify-center items-center bg-[#1d1d3c] pt-10">
@@ -587,34 +637,29 @@
           screens: {
             'sm': {'min': '200px', 'max': '600px'},   
             'md': {'min':'601px', 'max':'999px'},
-            'lg': {'min':'1000px', 'max':'1700px'},            
+            'lg': {'min':'1000px', 'max':'1700px'},
+            // 'iphoneSE': { 'raw': '(max-width: 375px) and (max-height: 667px)' } 
           },
         },
       },
     }
   </script>
 
-<!-- This is the navbar script -->
+
+  <!-- Navbar script -->
   <script>
-      document.getElementById('hamburger').addEventListener('click', function() {
-      const menu = document.getElementById('menu');
-      const hamburger = document.getElementById('hamburger');
-      
-      if (menu.classList.contains('hidden')) {
-          menu.classList.remove('hidden');
-          hamburger.textContent = '×'; // Change to "X"
-      } else {
-          menu.classList.add('hidden');
-          hamburger.textContent = '☰'; // Change back to hamburger
-      }
+    const hamburger = document.getElementById('hamburger');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Open mobile menu on hamburger click
+    hamburger.addEventListener('click', function() {
+      mobileMenu.classList.remove('hidden');
     });
 
-    document.getElementById('close').addEventListener('click', function() {
-      const menu = document.getElementById('menu');
-      const hamburger = document.getElementById('hamburger');
-      
-      menu.classList.add('hidden');
-      hamburger.textContent = '☰'; // Change back to hamburger
+    // Close mobile menu on "x" click
+    closeMobileMenu.addEventListener('click', function() {
+      mobileMenu.classList.add('hidden');
     });
   </script>
 
